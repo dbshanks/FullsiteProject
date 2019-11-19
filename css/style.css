@@ -1,0 +1,579 @@
+/* Site is fully mobile responsive test at phone, tablet and large screens */
+
+/* Table of Contents
+    01- Site Defaults
+    02- Splash Page Section
+    03- Hidden Navigation
+    04- Mid Section of Site
+    05 - Collection Gallery Section
+    06 - Footer Section
+*/
+
+/* 01 - Site Defaults */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 100%;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media screen and (max-width: 600px) {
+    :root {
+        font-size: 50%;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    color: #000;
+    overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+    color: #333;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    color: #6F121F;
+}
+
+/* End Site Defaults */
+
+
+
+/* 02 - Splash Section Start */
+.container {
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.brand {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 2rem;
+}
+
+.navigation ul li {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.navigation li {
+    margin-right: 1.5rem;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+
+.input-style {
+    border: none;
+    background-color: #ccc;
+    height: 2rem;
+    width: 20rem;
+    padding: 1rem;
+}
+
+.input-style::placeholder {
+    font-size: 1.2rem;
+}
+
+/* 03 - Hidden Navbar Section */
+@media screen and (max-width: 1024px) {
+
+    .hamburger-nav {
+        z-index: 110;
+    }
+
+    .hamburger-menu1 {
+        content: " ";
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 2px;
+    }
+
+    .hamburger-menu2 {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 2px;
+    }
+
+    .hamburger-menu3 {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 2px;
+    }
+
+    .navbar {
+        visibility: hidden;
+        width: 0;
+    }
+
+    .navigation input {
+        visibility: hidden;
+    }
+
+    .navbar-mobile {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .4s ease-in-out;
+    }
+
+    .navbar-hidden {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        z-index: 100;
+    }
+
+    .navbar-mobile-reveal {
+        top: 0;
+    }
+
+    .brand {
+        width: 100rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .navbar-mobile {
+        width: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+
+    .navbar-hidden {
+        width: 0;
+        visibility: hidden;
+        z-index: 0;
+    }
+
+    .navbar {
+        right: 0;
+    }
+
+}
+
+/* End Navbar Section */
+
+
+.splash-page {
+    background-image: url('../images/header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    width: 100vw;
+}
+
+@media screen and (max-width: 600px) {
+    .splash-page {
+        background-image: url('../images/porschemobilesplash.png');
+    }
+}
+
+.slogan {
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.slogan-typography {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-left: 10rem;
+    margin-top: 7rem;
+    position: relative;
+    font-size: 3rem;
+    z-index: 90;
+}
+
+.ampersand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-top: -9rem;
+    margin-left: -5rem;
+    left: 2;
+    font-size: 15rem;
+    position: absolute;
+    color: #B4B4B4;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+    .slogan-typography {
+        width: 40rem;
+        margin-top: 5rem;
+        margin-left: 5.5rem;
+        font-size: 2.5rem;
+    }
+
+    .ampersand {
+        margin-top: -6rem;
+        margin-left: -4rem;
+        font-size: 10rem;
+    }
+}
+
+.tagline {
+    width: 50%;
+    height: 100%;
+}
+
+.tagline-typography {
+    margin-top: 7rem;
+    margin-left: 20rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.new-listings {
+    height: 25vh;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 20rem;
+}
+
+.new-listing-contactus {
+    width: 40%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-listing-contactus h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 2.4rem;
+    color: #b4b4b4;
+}
+
+.new-listing-contactus h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.new-listing-section {
+    display: flex;
+    width: 60%;
+    height: 25vh;
+}
+
+.new-listing {
+    width: 33.333%;
+}
+
+.new-list-title {
+    height: 52px;
+    border-bottom: 5px solid #EDCE74;
+
+    display: flex;
+    align-items: center;
+}
+
+.new-listing-title {
+    color: #fff;
+}
+
+.new-listing-img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .new-listing-contactus {
+        width: 100%;
+    }
+
+    .new-listing-section {
+        visibility: hidden;
+    }
+}
+
+/* End Splash Page Section */
+
+
+/* 04 - Mid Section of site / slogan and section titles */
+.legacy-section {
+    position: relative;
+}
+
+.legacy-title {
+    position: absolute;
+    top: -10rem;
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 8rem;
+    color: #B4B4B4;
+}
+
+.legacy-caption {
+    width: 60rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 5rem;
+    text-align: center;
+    color: #b4b4b4;
+    margin-bottom: 10rem;
+}
+
+
+
+.collection-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.collection-title-typography {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 8rem;
+    color: #b4b4b4;
+    margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .legacy-title {
+        font-size: 5rem;
+    }
+
+    .legacy-caption {
+        width: 40rem;
+        font-size: 3rem;
+    }
+
+    .collection-title-typography {
+        font-size: 5rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.col-car {
+    width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .col-car {
+        width: 100%;
+    }
+
+    .tagline-typography {
+        visibility: hidden;
+    }
+}
+
+.legacy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.porsche-model {
+    width: 1300px;
+    max-width: 100%;
+    transform: scaleX(-1);
+}
+
+/* 05 - Collection Gallery Section */
+
+.col-car {
+    position: relative;
+}
+
+.col-car img {
+    max-width: 100%;
+    min-height: 100%;
+}
+
+.listing-details ul {
+    list-style-type: none;
+}
+
+.listing-details {
+    position: absolute;
+    width: 16rem;
+    height: 40%;
+    background-color: #111;
+    opacity: .6;
+    color: #fff;
+    right: -20rem;
+    bottom: 0;
+    border-left: 5px solid #EDCE74;
+    transition: all .3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listing-details-animate {
+    right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .listing-details {
+        width: 10rem;
+        padding: .5rem;
+        height: 100%;
+        margin: 0;
+        right: 0;
+        opacity: 0.8;
+        border-top: 5px solid #F2D44E;
+        border-left: none;
+        transition: none;
+    }
+
+}
+
+/* End Collection Gallery Section */
+
+
+/* 06 - Footer Section */
+.footer {
+    width: 100%;
+    height: 60%;
+    background-color: #000;
+    color: #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sign-up {
+    width: 33.3333%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.sign-up input {
+    border: none;
+    background-color: #fff;
+    height: 2rem;
+    width: 20rem;
+    padding: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.sign-up input::placeholder {
+    font-size: 1.1rem;
+}
+
+.sign-up button {
+    border: none;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1.2rem;
+    background-color: #F2D44E;
+}
+
+.footer-logo {
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contact {
+    width: 33.3333%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-contact ul {
+    list-style-type: none;
+}
+
+.footer-logo img {
+    width: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .footer {
+        height: 70%;
+    }
+
+    .sign-up {
+        width: 100%;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+    .footer-contact {
+        width: 100%;
+    }
+}

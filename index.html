@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Porsche Buyers Club</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800|Playfair+Display:400,400i&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Begin Splash Section -->
+    <div class="container">
+        <div class="row">
+            <div class="splash-page">
+                <div class="navigation">
+                    <div class="brand">
+                        <img class="logo" src="./images/porsche_logo.png" alt="">
+                        <h2>PORSCHE BUYERS CLUB</h2>
+                    </div>
+
+                    <!-- Hidden until Mobile viewports used -->
+                    <div class="hamburger-nav" id="hamburger-nav">
+                        <div class="hamburger-menu1"></div>
+                        <div class="hamburger-menu2"></div>
+                        <div class="hamburger-menu3"></div>
+                    </div>
+                    <div class="navbar-mobile" id="hidden-nav">
+                        <ul class="navbar-hidden">
+                            <li><a href="#legacy"> LEGACY </a></li>
+                            <li><a href="#collection"> COLLECTION </a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                            <li><input class="input-style" type="text" placeholder="Search"></li>
+                        </ul>
+                    </div>
+                    <!-- End Hidden Navigation -->
+
+                    <ul class="navbar">
+                        <li><a href="#legacy"> LEGACY </a></li>
+                        <li><a href="#collection"> COLLECTION </a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><input class="input-style" type="text" placeholder="Search"></li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="slogan">
+                        <h2 class="slogan-typography">WHAT YEAR <span class="ampersand">&</span> NUMBER FITS YOU?</h2>
+                    </div>
+
+                    <div class="tagline">
+                        <h2 class="tagline-typography">New & Vintage <br> Models</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="new-listings">
+                <div class="row">
+                    <div class="new-listing-contactus">
+                        <h2>Tell us what you want</h2>
+                        <h3 class="phone-number">1-888-333-1234</h3>
+                    </div>
+
+                    <!-- JavaScript iteration of an object array -->
+                    <div class="new-listing-section" id="new-listing-section">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Splash Session -->
+
+    <!-- Begin Legacy Slogan Section-->
+    <div class="container legacy-section" id="legacy">
+        <div class="row">
+            <div class="legacy">
+                <h1 class="legacy-title">Our Legacy</h1>
+                <img class="porsche-model" src="./images/porsche-model.png" alt="">
+                <p class="legacy-caption">
+                    Let our experienced Porsche experts find your next great motoring experience.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End Legacy Slogan Section -->
+
+    <!-- Begin Collection Gallery Section -->
+    <!-- JavaScript object array iteration - with Hover State giving price details -->
+    <div class="container" id="collection">
+        <div class="collection-title">
+            <h1 class="collection-title-typography">Our Collection</h1>
+        </div>
+
+        <div class="row" id="array-of-porsche">
+            <!-- JS array map with template will populate this section -->
+        </div>
+    </div>
+    <!-- End Collection Gallery Section -->
+
+    <!-- Begin Footer Section -->
+    <div class="footer" id="contact">
+        <div class="sign-up">
+            <p>Sign up for our weekly catalogue</p>
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email Address">
+
+            <button>Submit</button>
+        </div>
+        <div class="footer-logo">
+            <img src="./images/porsche_logo.png" alt="">
+        </div>
+        <div class="footer-contact">
+            <ul>
+                <li>
+                    <h3>Contact Us</h3>
+                </li>
+                <li>1-888-333-1234</li>
+                <li>1212 Rue Laurentian</li>
+                <li>Montreal, Quebec, Canada</li>
+                <li>sales@pbc.ca</li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Footer Section -->
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
